@@ -15,8 +15,10 @@ wrap{
 }
 
 img{
+    display:block;
     width: 600px;
     height: auto;
+    margin:0 auto;
 }
 .title{
     font-size: 3em;
