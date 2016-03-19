@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>study_day2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="title">스 . 터 . 디 . D . A . Y . 2</h1>
+    <article>
+        <h2 class="eraser">컨텐츠</h2>
+        <section>
+        <h2>1. 앞으로 HTML, CSS, JavaScript 에 대해 가져야할 우리의 자세</h2>
+        
+        <div class="gongshin">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fBhJrSqNaGQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <strong>좌절 금지입니다!!</strong>
+        <p>반복해야만 늘어나기 때문에 지금 처음 공부하는데 너무 집착하지 말고 지금은 지금대로 공부해 나갑시다.
+        어짜피 또 배울겁니다. 그래야만 하구요. 저도 그랬습니다…. 그러니 자바스크립트 부분은 일단 수업시간에라도 잘 들어 둡시당.
+        </p>
+        </section>
+        
+        <section>
+        <h2>잠시 언급하고 싶은 것...</h2>
+        <p>!important 사용금지!! 아직 CSS를 배우진 않았지만 버릇들까봐 미리 얘기할게요.</p>
+        <P>
+        !important는 사용하지 마세요. 나중에 선언한 CSS 가 100% 묻힙니다. 지금 괜찮다고 해도 나중이 문제. !important의 영향을 받는 하위 속성을 변경해야할 경우…
+        문제를 해결하지 못했다는 의미이기 때문에 결국 연달아 사용하게 되어 버립니다.
+        또 협업할 때 팀원에게 무한한 고통을 선사합니다. 뭘 고쳐야 할지 알아낼 수가 없기 때문에…
+        </P>
+        <strong>Jquery를 수정할 때는!</strong>
+        <p>
+            <del>JQuery를 고치는게 정답. CDN 방식이 아니라 내장해서 직접 수정.</del> —> 틀린 해답. !important를 사용하든지 같은 클래스 이름을 사용해 덮어버리세요. 하지만 아시는데로 !important는 비추입니다. 
+        </p>
+        <strong>네이버에서 혹은 브라우저 호환을 준비한 사이트들이 시만틱하게 짜지 않고 div&#60;class = “main, header, footer”&#62; 라고 작성하는 이유.</strong>
+        <p> html5태그를 지원하지 않는 브라우저에 대응하기 위해, 그리고 html5가 지원이 될 때를 대비해서 클래스 이름을 HTML5 태그명과 동일하게 사용합니다.
+            현재 익스플로러 8은 전혀 지원을 안하고 11까지는 일부만 지원합니다. 엣지와 다른 브라우저들은 전부 지원합니다.
+        </p>
+        <strong>&#60;dl&#62; 요소가 모바일 대응(반응형)에 문제가 있나요?</strong>
+        <p>없습니다. 만드는 방법은 직접 해보고 가장 알맞은 방법으로 본인이 선택합시다. 경우에 따라 디자인이 다 다를 것이고 그에 따라 만드는 방법도 달라지기 때문입니다. 웹접근성,      반응형 모두 본인이 만들어 보고 판단합시다.
+        </p>
+          
+
+        </section>
+        
+        <section>
+        <h2>2. HTML 요소의 종류2</h2>
+        <ul>
+            <li>
+                <a href="http://www.w3schools.com/tags/tag_p.asp">&#60;P&#62;</a>
+                <p>: paragraph. 문장의 의미하는 요소입니다.</p>
+            </li>
+            <li>
+                <a href="http://www.w3schools.com/tags/tag_hr.asp">&#60;hr&#62;</a>
+                <p>: 콘텐츠 사이의 가로 구분선입니다. —> 위 아래 콘텐츠의 내용이 다르거나, 내용의 테마를 바꾸고자 할 때 사용합니다.</p>
+                <p>&#60;h1&#62; 태그의 경우 &#60;section&#62; 태그안에 들어갈 경우 폰트 사이즈가 바뀝니다.** —> section안에 들어가는 테그는 h2부터가 적당한듯합니다.</p>
+            </li>
+            <li>
+                <a href="http://www.w3schools.com/tags/tag_pre.asp">&#60;pre&#62;</a>
+                <p>: html에 작성되어 있는 내용을 그대로 보여줍니다. 따로 편집할 필요가 없어 편해보이긴 하지만 태그에 ‘아무런 의미가 없기’ 때문에 
+	           주로 간단한 수식이나 코드를 보여주고자 할 때만 사용합니다.</p>
+            </li>
+            <li>
+                <a href="http://www.w3schools.com/tags/tag_blockquote.asp">&#60;blockquote&#62;</a>
+                <p>: 인용해오는 구절 혹은 컨텐츠를 의미하는 태그입니다. 저작권 관련 문제 때문에 사용합니다. quote: 누군가 한 말(가라사대, 왈)</p>
+            </li>
+            <li>
+                <a href="http://www.w3schools.com/tags/tag_ol.asp">&#60;ol&#62;</a>
+                <p>: 순서있는 목록을 나타내는 요소입니다. 직계자식 요소로 반드시 &#60;li&#62;요소를 사용해야 합니다.</p>
+            </li>
+            <li>
+                <a href="http://www.w3schools.com/tags/tag_ul.asp">&#60;ul&#62;</a>
+                <p>: 순서가 없는 목록입니다. 직계자식 요소로 반드시 &#60;li&#62;요소를 사용해야 합니다.</p>
+            </li>
+            <li>
+                <a href="http://www.w3schools.com/tags/tag_li.asp">&#60;li&#62;</a>
+                <p>: 리스트에서 사용하는 아이템입니다. 부모 요소로 반드시 &#60;ol&#62; 혹은 &#60;ul&#62; 을 가져야 합니다.</p>
+            </li>
+            <li>
+                <a href="http://www.w3schools.com/tags/tag_dl.asp">&#60;dl&#62;,</a> <a href="http://www.w3schools.com/tags/tag_dt.asp">&#60;dt&#62;,</a> <a href="http://www.w3schools.com/tags/tag_dd.asp">&#60;dd&#62;</a>
+                <p>: 주로 사전이나 검색결과 등 특정 대상과 그 설명을 해야할 경우 사용해야 하는 요소입니다. 무조건 &#60;dt&#62; 부터 시작하여 &#60;dd&#62; 로 이어져야합니다.
+                —> 작은 단위의 컨텐츠에 주로 사용합니다. &#60;h1&#62; 과 같은 heading 요소를 사용하기가 애매할 경우 사용합니다.
+                </p>
+                <pre>
+                    &#60;body&#62;
+                        &#60;dl&#62;
+                            &#60;dt&#62;치킨&#60;/dt&#62;
+                            &#60;dd&#62;치킨은 닭튀김이다.&#60;/dd&#62;
+                            &#60;dd&#62;치킨은 진리다.&#60;/dd&#62;
+                        &#60;/dl&#62;
+                    &#60;/body&#62;
+                </pre>
+            </li>
+            <li>
+                <a href="http://www.w3schools.com/tags/tag_figure.asp">&#60;figure&#62;,</a> <a href="http://www.w3schools.com/tags/tag_figcaption.asp">&#60;figcaption&#62;</a>
+                <p>: 특정 문서에서 컨텐츠를 부연 설명 하기 위한 컨텐츠를 나타냅니다. 주로 이미지와 함께 사용합니다. &#60;aside&#62; 와 다른점은 좀 더 작은 단위의 컨텐츠에 사용한다는 것입니다.</p>
+                <pre>
+                    &#60;figure&#62;
+                        &#60;img src="나의 사진.png" alt=""&#62;
+                        &#60;figcaption&#62;내가 16살때, 성산일출봉 앞에서 찍은 사진이다.&#60;/figcaption&#62;
+                    &#60;/figure&#62;
+                </pre>
+            </li>
+            <li>
+                <a href="http://www.w3schools.com/tags/tag_div.asp">&#60;div&#62;</a>
+                <p> : 특정한 의미 없이 그룹을 묶어 구획화시키기 위해 사용. 의미가 없다보니 class와 같이 사용해줍니다. 마땅히 시멘틱한 표현의 셀렉터를 사용할 수 없을 경우! 사용해요 ^^</p>
+            </li>
+            <li>
+                <a href="http://www.w3schools.com/tags/tag_main.asp">&#60;main&#62;</a>
+                <p>: &#60;body&#62; 요소 안의 메인 컨텐츠를 나타내기 위해 사용합니다. HTML문서안에 반드시 하나만 사용합니다. </p>
+            </li>
+            <li>
+                <a href="http://www.w3schools.com/tags/tag_table.asp">&#60;table&#62;</a>
+                <p>: 테이블 요소입니다. table 요소로 페이지의 레이아웃을 작성하는건 지양해야 합니다. 의미도 맞지 않고 테이블 안에 테이블 요소를 넣게 되는 일이 빈번한데 그렇게 구조가 깊어지면 성능저하가 발생합니다. <em>하지만 컨텐츠 내에서 테이블을 작성해야 할때는 사용합니다!</em></p>
+            </li>
+            <li>
+                <a href="http://www.w3schools.com/tags/tag_caption.asp">&#60;caption&#62;</a>
+                <p>: 테이블의 제목입니다. —> 권고사항 :  “The &#60;caption&#62; tag must be inserted immediately after the &#60;table&#62; tag.”&#40;table태그 바로 뒤에 caption 태그를 넣어 주세요.&#41; </p>
+            </li>
+            <li>
+                <a href="http://www.w3schools.com/tags/tag_thead.asp">&#60;thead&#62;, <a href="http://www.w3schools.com/tags/tag_tbody.asp">&#60;tbody&#62;</a>, <a href="http://www.w3schools.com/tags/tag_tfoot.asp">&#60;tfoot&#62;</a>
+                <p>: 테이블의 헤드, 바디, 푸터 부분을 의미합니다. 모두 선택적 입력사항이지만 바디는 반드시 작성해주는게 좋습니다.</p>
+                <ul>
+                    <li>
+                        <p><a href="http://www.w3schools.com/tags/tag_tr.asp">&#60;tr&#62;</a> : 테이블의 한줄을 의미합니다. &#40;table row&#41;</p>
+                    </li>
+                    <li>
+                        <p><a href="http://www.w3schools.com/tags/tag_th.asp">&#60;th&#62;</a> : 테이블의 내용 중 제목에 해당하는 내용을 의미합니다. &#40;table header&#41;</p>
+                    </li>
+                    <li>
+                        <p><a href="http://www.w3schools.com/tags/tag_td.asp">&#60;td&#62;</a> : 테이블의 내용 중 데이터에 해당하는 내용을 의미합니다. &#40;table data&#41; </p>
+                        <pre>
+                        &#60;table&#62;
+                            &#60;caption&#62;
+                              철수의 모든것
+                            &#60;/caption&#62;
+                            &#60;tfoot&#62;
+                                &#60;tr&#62;
+                                    &#60;td&#62;결론&#60;/td&#62;
+                                    &#60;td colspan="3"&#62;완벽하게 멋져&#60;/td&#62;
+                                &#60;/tr&#62;
+                            &#60;/tfoot&#62;
+                            &#60;tbody&#62;
+                              &#60;tr&#62;
+                                &#60;th>이름&#60;/th&#62;
+                                &#60;th>나이&#60;/th&#62;
+                                &#60;th>전화번호&#60;/th&#62;
+                              &#60;/tr&#62;
+                              &#60;tr&#62;
+                                &#60;td&#62;철수&#60;/td&#62;
+                                &#60;td&#62;60&#60;/td&#62;
+                                &#60;td&#62;0000-0000&#60;/td&#62;
+                              &#60;/tr&#62;
+                            &#60;/tbody&#62;
+                        &#60;/table&#62;
+                    </pre>
+                    <p> 
+                        **&#60;tfoot&#62; 태그의 경우 &#60;tbody&#62; 보다 앞에 써도 보여지는 결과는 가장 뒤에 따라 옵니다. 시각장애인의 편의성을 위해 결과를 먼저 보여주도록 만들었습니다. 
+                    </p>
+                   <p>colspan =“ ” &#58; column을 병합합니다.&#40;span의 의미&#58; 둘 사이를 잇다.&#41;</p>
+                    </li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="http://www.w3schools.com/tags/tag_form.asp">&#60;form&#62;요소들</a>
+                <ul>
+                    <li>
+                    <a href="http://www.w3schools.com/tags/tag_input.asp">&#60;input&#62;</a>
+                    <p>: 데이터를 입력받아 서버에 전달하는 요소입니다. type의 속성에 따라 다양한 일을 수행합니다.</p>
+                    <pre>
+                        &#60;form&#62;
+                            &#60;input type="text"&#62;
+                            &#60;input type="password"&#62;
+                        &#60;/form&#62;
+                    </pre>
+                    </li>
+                    <li>
+                    <a href="http://www.w3schools.com/tags/tag_label.asp">&#60;label&#62;</a>
+                    <p>: 입력폼에서 받을 데이터를 소개합니다.</p>
+                    <pre>
+                        &#60;label for="man"&#62;남자&#60;/label&#62;
+                        &#60;input type="radio" id="man" name="gender"&#62;
+                        &#60;label for="women"&#62;여자&#60;/label&#62;
+                        &#60;input type="radio" id="women" name="gender"&#62;
+                    </pre>
+                    </li>
+                    <li>
+                    <a href="http://www.w3schools.com/tags/tag_button.asp">&#60;button&#62;</a>
+                    <p>: 유저가 클릭 했을 때 무언가를 행할 수 있는 버튼입니다.</p>
+                    </li>
+                    <li>
+                    <a href="http://www.w3schools.com/tags/tag_textarea.asp">&#60;textarea&#62;</a>
+                    <p>: 여러줄로 텍스트를 받고 싶을 때 사용합니다. 그리고 내용물에 따라 크기 조절이 가능합니다.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        </section>
+        <section>
+            <h2>Text Level HTML 요소들</h2>
+            <ul>
+                <li>
+                    <a href="http://www.w3schools.com/tags/tag_a.asp">&#60;a&#62;</a>
+                    <p> : 페이지간의 링크를 정의합니다. (anchor)</p>
+                </li>
+                <li>
+                    <a href="http://www.w3schools.com/tags/tag_em.asp">&#60;em&#62;</a>
+                    <p>: 약한 강조입니다.</p>
+                </li>
+                <li>
+                    <a href="http://www.w3schools.com/tags/tag_strong.asp">&#60;strong&#62;</a>
+                    <p>: 강한 강조입니다.</p>
+                </li>
+                <li>
+                    <a href="http://www.w3schools.com/tags/tag_abbr.asp">&#60;abbr&#62;</a>
+                    <p>: 약어를 나타냅니다.</p>
+                    <code>&#60;abbr title="World Wide Web"&#62;www&#60;/abbr&#62;</code>
+                </li>
+                <li>
+                    <a href="http://www.w3schools.com/tags/tag_q.asp">&#60;q&#62;</a>
+                    <p> : 한줄 인용구입니다.</p>
+                </li>
+                <li>
+                    <a href="http://www.w3schools.com/tags/tag_cite.asp">&#60;cite&#62;</a>
+                    <p> : 출처를 나타냅니다.</p>
+                </li>
+                <li>
+                    <a href="http://www.w3schools.com/tags/tag_dfn.asp">&#60;dfn&#62;</a>
+                    <p> : 문서에서 최초로 정의한 단어를 나타냅니다. 보통 뒤에 단어의 설명이 따라오는 구조입니다. (define tag)</p>
+                    <code>&#60;p&#62;&#60;dfn&#62;치맥&#60;/dfn&#62; 은 치킨과 맥주를 합친 신조어입니다.&#60;/p&#62;</code>
+                </li>
+                <li>
+                    <a href="http://www.w3schools.com/tags/tag_time.asp">&#60;time&#62;</a>
+                    <p>: 시간을 나타냅니다.</p>
+                    <pre>
+                        &#60;time&#62;10:00&#60;/time&#62;
+                        &#60;time datetime="2008-02-14 20:00"&#62;Valentines day&#60;/time&#62;
+                    </pre>
+                </li>
+                <li>
+                    <a href="http://www.w3schools.com/tags/tag_code.asp">&#60;code&#62;</a>
+                    <p>: 문서상에서 코드를 명시적으로 나타내는 요소입니다.</p>
+                </li>
+                <li>
+                    <a href="http://www.w3schools.com/tags/tag_span.asp">&#60;span&#62;</a>
+                    <p>: 자체의 의미는 없으나 다양한 속성을 부여하기 위해 사용합니다. (div 와 비슷하지만 div가 봉지라면 span 스티커 같은 느낌)</p>
+                </li>
+                <li>
+                    <a href="http://www.w3schools.com/tags/tag_br.asp">&#60;br&#62;</a>
+                    <p> : 줄바꿈 요소입니다.</p>
+                </li>
+                <li>
+                    <a href="http://www.w3schools.com/tags/tag_img.asp">&#60;img src="" alt="" title=""&#62;</a>
+                    <p>: 이미지 요소입니다. alt는 이미지 로딩 실패 시 대체할 수 있는 텍스트를 넣어줍니다. title은 이미지의 제목 혹은 주제를 나타냅니다.</p>
+                </li>
+                 <li>
+                    <a href="http://www.w3schools.com/tags/tag_del.asp">&#60;del&#62;</a>
+                    <p> : 문서상에서 삭제된 내용을 말합니다.</p>
+                </li>
+                <li>
+                    <a href="http://www.w3schools.com/tags/tag_s.asp">&#60;s&#62;</a>
+                    <p> : 문서상에서 더 이상 적절하지 않은 내용을 말합니다.</p>
+                </li>
+            </ul>
+        </section>
+        
+    </article>
+    
+</body>
+</html>
+
+
+
+
+
+
+
