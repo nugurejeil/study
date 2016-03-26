@@ -6,7 +6,7 @@ body{
     margin: 0;
     padding: 0;
 }
-wrap{
+article{
     display: block;
     width: 1010px;
     margin: 0 auto;
