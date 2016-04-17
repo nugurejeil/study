@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Evan Han">
+    <title>study_week6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="title">스 . 터 . 디 . W . E . E . K . 6</h1>
+    <article>
+        <h2 class="eraser">컨텐츠</h2> 
+        <section>
+        <h2>1. HTML 퀼리티를 높히는 습관</h2>
+        
+        <p>HTML Validator 돌려보기 : 통과시켜서 문법상의 문제가 없고 웹표준을 준수했다는 확인을 받읍니다!</p>
+        <p>나보다 뛰어난 사람에게 코드리뷰 받기 : HTML에는 정답이 없기 때문에 경험을 통해 얻어진 노하우가 무척 중요합니다. </p>
+       
+        <h2>2. CSS 퀄리티를 높히는 숩관</h2>
+        <ul>
+            <li>
+                <p>CSS문서 최 상단에 @charset "utf-8"; 설정으로 문자가 깨지지 않도록 하기</p>
+            </li>
+            <li>
+                <p>reset.css가져오기 (Eric Meyer reset.css 등등)</p>
+            </li>
+            <li>
+                <p>CSS validator 통과하기</p>
+            </li>
+            <li>
+                <p>CSS 작성 순서 정하기</p>
+                <ol>
+                    <li>
+                        <p>레이아웃에 큰 영향을 주는 요소들 : float, display, width, height, padding, margin, border</p>
+                    </li>
+                    <li>
+                        <p>폰트 요소들 : font-size, line-height, font-family, letter-spacing, 기타 폰트 속성들</p>
+                    </li>
+                    <li>
+                        <p>컬러(color), 배경(background)</p>
+                    </li>
+                    <li>
+                        <p>animation, transistion, transform</p>
+                    </li>
+                </ol>
+                <p>작성 순서와 관련된 자세한 얘기는 여기를 참고하세요. <a href="http://www.clearboth.org/ordering_properties/">http://www.clearboth.org/ordering_properties/</a></p>
+            </li>
+        </ul>
+        </section>
+        
+        <section>
+        <h2>2. HTML5 Shiv</h2>
+        <p>: IE 9 이전의 버전들은 HTML5엘리먼트를 지원하지 않습니다. 때문에 레거시 브라우저에서도 최신 HTML5 엘리먼트를 사용할 수 있도록 HTML5 Shiv가 탄생하였습니다.</p>
+        <p>이와 관련된 이야기는 
+            <a href="http://www.paulirish.com/2011/the-history-of-the-html5-shiv/">http://www.paulirish.com/2011/the-history-of-the-html5-shiv/</a> 여기를 참고하세요.
+        </p>
+        <p>HTML5 Shiv 링크: 
+            <a href="https://cdnjs.com/libraries/html5shiv">https://cdnjs.com/libraries/html5shiv</a>
+        </p>
+        </section>
+        
+        <section>
+        <h2>3. CSS 방법론</h2>
+        <img src="img/css.gif" alt="this is css" title="this is css">
+        <p>정답이 없는 애매한 언어인 CSS이기에 우리는 CSS를 작성하다 보면 위와 같은 상황을 많이 접하게 됩니다. 때문에 어떠한 작성 기준을 정해서 코드의 유지보수를 용이하게 하고자 하는 움직임이 나타났습니다.</p>
+        <h3>SMACSS(Scalable and Modular Architecture for CSS) : 대표적으로 많이 쓰입니다.</h3>
+        <a href="https://smacss.com">https://smacss.com</a>
+        
+        <ul>
+            <li>
+                <p>조나단 스눅(Jonathan Snook)이 개발</p>
+            </li>
+            <li>
+                <p>확장가능한 모듈형태의 아키텍쳐</p>
+            </li>
+            <li>
+                <p>클래스명을 의미나, 목적에 맞춰서 사용(딱 봤을때 어디서 무엇을 위해 사용하는 클래스인지 분명히 알 수 있도록)</p>
+            </li>
+            <li>
+                <p>카테고리 분리하기</p>
+                <ol>
+                    <li>
+                        <p>base css :html, body, header나 footer, clear fix, 기타 공통으로 쓰이는 CSS들 (클래스나 아이디를 설정하지 않아도 될 것들)</p>
+                    </li>
+                    <li>
+                        <p>layout css : 레이아웃과 관련된 CSS (큰 단위의 레이아웃). 요소들을 어떻게 나열할지 결정합니다. 보통 ID셀렉터를 이용하는데 페이지에서의 중요도를 어필하기 위함입니다.</p>
+                    </li>
+                    <li>
+                        <p>module css : 반복적으로 재사용되는 것들이 이에 해당됩니다. 어디서든 사용되기 때문에 고유의 클래스 이름을 지정해줍니다.</p>
+                    </li>
+                    <li>
+                        <p>state css : 요소의 상태에 대한 CSS(가령 버튼일 눌렸을 때의 CSS, 에러가 발생했을 때의 상태, display: none;)</p>
+                    </li>
+                    <li>
+                        <p>theme css : 특정한 클래스별로 테마를 별도로 줘야할 때</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <p>번역 페이지</p>
+        <ul>
+            <li>
+                <a href="http://dogfeet.github.io/articles/2012/smacss.html">http://dogfeet.github.io/articles/2012/smacss.html
+                </a>
+            </li>
+            <li>
+                <a href="http://dogfeet.github.io/articles/2012/smacss-part2.html">http://dogfeet.github.io/articles/2012/smacss-part2.html</a>
+            </li>
+        </ul>
+        </section>
+    </article>
+</body>
+</html>
+
+
+
+
+
+
+
