@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Evan Han">
+    <title>study_week7</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <h1 class="title">스 . 터 . 디 . W . E . E . K . 7(자바스크립트)</h1>
+    <article>
+        <h2 class="eraser">컨텐츠</h2> 
+        <section>
+        <h2>1. 자바스크립트란?</h2>
+        <figure>
+            <img src="img/brendan-eich.jpg" width="" alt="브랜드아이크" title="자바스크립트의 아버지">
+            <figcaption>브랜든 아이크</figcaption>
+        </figure>
+        <p>1995년 5월 넷스케이프사에서 브랜든 아이크 주도 하에 개발했습니다. 넷스케이프사가 사라지고 난 뒤, 후에 넷스케이프 네비게이터의 코드명 ‘모질라’를 따와 모질라 재단이 설립이 되었고 자바스크립트의 개발은 계속 되었습니다. 때문에 여러분들이 자바스크립트의 공식적인 정보를 얻고자 한다면 모질라 개발자 센터를 방문하시면 됩니다.</p>
+        <a href="https://developer.mozilla.org/ko/">https://developer.mozilla.org/ko/</a>—> 모질라 개발자 센터
+        <figure>
+            <img src="img/Mozilla.jpg" alt="모질라로고" title="모질라">
+            <figcaption>모질라 로고</figcaption>
+        </figure>
+        <p>자바스크립트는 넷스케이프 네비게이터에서 지원하던 비표준 기능이었습니다. 정적인 문서가 아닌 동적으로 움직이는 문서로 만드는 것을 목표로 개발되었습니다. 
+        <p>원래 이름은 ‘라이브 스크립트’였지만, 당시에 뜨던 언어중에 ‘핫자바(지금의 ‘자바’)’ 가 있었는데 이름만 빌려와 자바스크립트가 되었습니다. 이때 상표권을 자바를 개발했던 ‘선 마이크로시스템즈’ 에 넘겼고 그 선 마이크로시스템즈를 오라클이 인수하면서 오늘날 자바스크립트의 상표권도 오라클이 가지게 되었습니다.</p>
+        <strong>표준명칭은 ECMAScript(ECMA-262) 입니다.</strong>
+
+        <h2>2. 개발 역사</h2>
+        <ol>
+            <li>
+                <p>1998년 6월 ECMAScript 2발표</p>
+            </li>
+            <li>
+                <p>1999년 12월 ECMAScript 3발표</p>
+            </li>
+            <li>
+                <p>2007년 ECMAScript 4 개발을 시작했으나 중도 포기합니다. 여러가지 새로운 기능들을 넣고자 노력했으나 ECMA3 호환성을 포기하게 생기자 개발이 좌초됩니다.</p>
+            </li>
+            <li>
+                <p>2009년 ECMAscript 5 를 2009년 3월에 발표했습니다.(현재 가장 많이 사용됩니다.)</p>
+            </li>
+            <li>
+                <p>2015년 6월 ECMAscript2015(ECMAscript 6) 가 확정, 발표됐습니다.</p>
+            </li>
+        </ol>
+        <p>2000년대에 들어 자바스크립트가 너무나 많이 사용되는 반면에 새로운 버전의 발표가 늦어지자 개발자들이 자체적으로 개발하여 Compile2JavaScript 계열의 언어가 등장하게 됩니다. (TypeScript, CoffeeScript 등) 또한 아직 최신 자바스크립트의 기능을 브라우저가 지원을 잘 안하고 있어 Babel 등의 트랜스파일러가 등장해 최신버전의 자바스크립트(ECMAscript2015)를 ECMAscript5 버전으로 바꾸기도 합니다.</p>
+        </section>
+        
+        <section>
+        <h2>2. 기본 문법</h2>
+        <ul>
+            <li>
+                <p>대소문자를 구분합니다. (대문자a와 소문자 A는 다릅니다!)</p>
+            </li>
+            <li>
+                <p>유니코드를 기반으로 해서 영어가 아닌 다른 언어도 코드 안에서 사용할 수 있습니다.</p>
+            </li>
+            <li>
+                <p>명령어는 문장(statement)으로 부릅니다.</p>
+            </li>
+            <li>
+                <p>한 문장은 세미콜론(;)으로 끝맺습니다.</p>
+            </li>
+            <li>
+                <p>스페이스, 탭, 줄바꿈 문자는 공백(white-space)이라고 부릅니다.</p>
+            </li>
+        </ul>
+        <h3>&#60;script&#62;</h3>
+        <p>브라우저 환경에서 자바스크립트를 사용할 때 필요한 태그입니다.</p>
+        <p>html5 이전까지는 type=“text/javascript”가 표준이었으나 html5부터는 type값을 생략할 수 있습니다.
+        기본상태에서는 반드시 순차적으로 실행됩니다. 브라우저는 &#60;script&#62; 태그를 만나면 렌더링을 멈추고 다운로드 및 실행을 끝마친 후에 나머지 태그를 읽고 랜더링합니다.</p>
+        <a href=" https://stevesouders.com/hpws/move-scripts.php"> https://stevesouders.com/hpws/move-scripts.php</a>
+        <p>렌더링 순서에 관한 사이트입니다. &#60;script&#62;태그의 위치에 따른 로딩시간의 차이를 보여줍니다. 참고하세요!</p>
+        <h3>주석</h3>
+        <p>개발자가 남기는 메모입니다. 스크립트 엔진은 주석을 완전히 무시합니다.</p>
+        <p>한줄주석 : //</p>
+        <p>블럭주석 : /*로 시작해 */로 끝납니다.</p>
+        <h3>변수</h3>
+        <p>데이터를 담는 빈 공간입니다.</p>
+        <ul>
+            <li>
+                <p>var(소문자만 사용!) + 공백 + 변수이름 형태로 선언합니다.</p>
+                <pre>:  var num;</pre>
+            </li>
+            <li>
+                <p>변수이름 = 값의 형태로 값을 할당합니다.</p>
+                <pre>: num = 1;</pre>
+            </li>
+            <li>
+                <p>선언과 할당을 동시에 할 수도 있습니다.</p>
+                <pre>: var num = 1;</pre>
+            </li>
+            <li>
+                <p>쉼표로 구분하면 여러 변수를 한번에 선언할 수 있습니다.</p>
+                <pre>: var num =1, num2 =2;</pre>
+            </li>
+            <li>
+                <p>변수의 값은 다른 변수에 할당할 수도 있습니다.</p>
+                <pre>
+                : var num =1, num2 = 2;
+                num = num2;
+                console.log(num); ==> 2
+                </pre>
+            </li>
+        </ul>
+        <p>변수이름은 $, _ 를 제외한 공백, 특수문자, 구두점(글의 여러 가지 경계를 구분하기 위해 사용되는 반점(,), 온점(.), 물음표(?) 등등…)을 사용할 수 없습니다. 숫자로 시작해서도 안됩니다. 유니코드 문자도 사용할 수 있지만(한국어도 사용가능합니다. 하지만 크롬 말고 다른 브라우저(레거시 브라우저)는 인식을 못할 수 있습니다.) 예약어는 사용할 수 없습니다.</p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar</a>
+        <p>위 사이트를 참고하시면 예약어에는 어떠한 것들이 있는지 알 수 있습니다.</p>
+        </section>
+    </article>
+</body>
+</html>
+
+
+
+
+
+
+
