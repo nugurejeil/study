@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Evan Han">
+    <title>study_week9</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="title">스 . 터 . 디 . W . E . E . K . 9</h1>
+    <article>
+        <h2>함수(Function)</h2>
+        <section>
+        <h2>1. 함수란?</h2>
+        <ul>
+            <li>
+                <p>function + 공백 + 함수이름 + 괄호 + 중괄호로 선언합니다.</p>
+                <pre>
+                    function nothing(){
+                    console.log('hi');
+                    }
+                </pre>
+            </li>
+            <li>
+                <p>함수 이름 뒤에 ( )를 넣어 실행하지만, ( )를 빼면 그냥 변수값이 됩니다. 그래서 ‘값’ 으로 복사된 함수도 똑같이 함수처럼 실행할 수 있습니다.</p>
+            </li>
+            <li>
+                <p>다른 모든 타입은 “값” 으로만 취급되지만 , 함수는 “값”이기도 한 동시에 “행동” 또는 “기능” 입니다.</p>
+            </li>
+            <li>
+                <p>여러차례 반복해야하는 코드 뭉치를 묶어서 하나의 이름으로 표현한것 이라고 할 수 있습니다.</p>
+                <div class="clearfix function_exm">
+                    <img src="img/raman.png" alt="instruction" title="라면조리법">
+                    <span>===></span>
+                    <pre>
+            function 라면끓이기( ){
+                냄비에넣기(물500ml);
+                끓인다();
+                냄비에넣기(면, 라면스프);
+                끓인다();
+                불을끊다();
+                그릇에담는다();
+            }    
+                    </pre>
+                </div>
+                <figure>
+                   <pre>
+                       function 라면끓이기( <span>물끓일시간</span> ){
+                        냄비에넣기(물500ml);
+                        끓인다();
+                        냄비에넣기(면, 라면스프);
+                        끓인다( <span>물끓일시간</span> );
+                        불을끊다();
+                        그릇에담는다();
+                    }
+                    라면끓이기( <span>2분</span> );
+                   </pre>
+                    <figcaption>
+                        --> 함수 이름 뒤의 괄호 에는 인수를 넣어 함수 내부의 특정 내용만 변경 할 수도 있습니다.
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <p>함수 안에서 <span>return</span> 키워드를 사용하면 즉시 함수를 종료하고 return 뒤의 값을 밖으로 뺄 수 있습니다.</p>
+                <pre>
+                    function double(num){
+
+                    return num *2;
+
+                    }
+
+                    var result = double(4);
+
+                    console.log(result);
+                </pre>
+            </li>
+        </ul>
+        <h2>2. 함수를 만드는 여러가지 방법</h2>
+        <ol>
+            <li>
+                <p>
+                    생성자를 사용하는 방식
+                </p>
+                <pre>
+                    var func = new Function(‘value’, ’return result’ );
+                </pre>
+            </li>
+            <li>
+                <p>
+                    리터럴 방식
+                </p>
+                <pre>
+                    function func(value){
+                        return result;
+                    }
+                </pre>
+            </li>
+            <li>
+                <p>
+                    이름 없이 만드는 방식(익명 함수)
+                </p>
+                <pre>
+                    var func = function(value){
+                        return result;
+                    }
+                </pre>
+            </li>
+            <li>
+                <p>
+                    즉시 실행 함수(IIFE : Immediately Invoked Function Expressions)
+                </p>
+                <pre>
+                    (function(value){
+                        return result;
+                    })();
+                </pre>
+            </li>
+        </ol>
+        <h2>3. 함수의 특징</h2>
+        <h3>1. 스코프 체인(Scope Chain)</h3>
+        <p>함수를 실행하면 메모리에 함수만의 독립적인 실행공간이 만들어집니다. 그것을 <span>Context</span>라고 부릅니다. 이 때 변수와 함수의 scope(스코프)가 정해집니다.</p>
+        <img src="img/scopeChain.png" alt="scopeChain" title="스코프체인">
+        <p>스코프가 자신에게 없는 값을 찾아 부모를 타고 올라가는 현상을 <span>스코프 체인</span>이라고 합니다.</p>
+        
+        <h3>2. 클로져(Closure)</h3>
+        <p>아래 코드를 보시면 내부에 있는 기능2()함수를 이용해 외부에 있는 func() 함수의 결과값을 리턴하고 있습니다.</p>
+        <img src="img/closure.png" alt="closure" title="클로져">
+        <p>자신이 만들어졌을 때의 Context를 기억하고 밖으로 나와있는 함수를 <span>클로져</span>라고 합니다.</p>
+        
+        <h3>3. 호이스팅(Hoisting)</h3>
+        <p>자바스크립트 해석기는 함수 내에 있는 변수와 함수의 선언을 먼저 처리하는데, 이 때문에 선언이 함수 가장 앞에 있는 듯한 호이스팅(hoisting) 현상이 발생합니다.(hoist: 끌어 올리다.)</p>
+        <pre>
+            function outer(arg){
+             
+              console.log(value);
+              
+             function inner(){
+                return arg + ‘name’;
+              }
+              
+              var value =‘Hello!’
+              
+            return inner;
+            }
+            
+            var func = outer(‘kim’);
+        </pre>
+        <p>변수 value는 9번째 줄에 선언되었지만 3번째 줄에서 value변수를 호출해도 에러가 나지 않습니다.</p>
+        
+        <h3>4. 스코프(Scope)</h3>
+        <p>변수의 생존 범위를 말합니다.</p>
+        <p>ES5까지는 전역 스코프와 함수 스코프만 존재했지만, ES6로 오면서 <span>let</span> 키워드를 통해 선언된 변수는 블럭 스코프 라는 것을 가지게 됩니다.</p>
+        <pre>
+            if(true){  
+              let val = ‘Hello’;
+              console.log(val);}
+            val;
+        </pre>
+        <p>let 키워드로 선언된 val변수는 자신을 둘러싼 중괄호 안에서만 사용될 수 있습니다.</p>
+        
+        <h3>5. 그밖의 특징</h3>
+        <ul>
+            <li>
+                <p>함수를 실행할 때, 함수 안에는 arguments라는 변수가 자동으로 만들어 집니다.</p>
+            </li>
+            <li>
+                <p>함수도 객체이기 때문에 .length 와 .name프로퍼티가 있습니다. func.length : 인수의 갯수(함수를 선언했을때 적어둔 인수의 갯수), func.name : 함수의 이름.</p>
+            </li>
+            <li>
+                <p>자바스크립트의 모든 타입 생성자는 함수입니다.</p>
+            </li>
+        </ul>
+        </section>
+        <h2>연산자</h2>
+        <section>
+            <h3>1. 비교연산자</h3>
+            <p>비교연산자는 <span>==</span>, <span>===</span> 기호의 양쪽에 있는 값을 비교하여 Boolean값을 반환합니다.</p>
+            <p><span>==</span>기호의 경우 비슷해 보이는 값의 타입을 자동으로 변환시켜주기 때문에 좀 더 엄격한 <span>===</span> 기호의 사용을 권장합니다.</p>
+            <pre>
+                null == undefined
+                null === undefined
+                ‘7’ == 7
+                ‘7’ === 7
+            </pre>
+            <p>위의 코드를 실행하면 == 와 === 의 차이를 더 명확하게 알 수 있습니다.</p>
+            
+            <h3>2. 할당연산자</h3>
+            <p>할당연산자 <span>=</span> 는 오른쪽의 값을 왼쪽으로 할당하고 할당된 값을 반환합니다.</p>
+            <pre>
+                 name = ‘한재현’;   ==>   ‘한재현’
+            </pre>
+            
+            <h3>3. 부정연산자</h3>
+            <p>부정연산자 <span>!</span>를 변수나 값 앞에 붙이면 반대의 Boolean값을 반환합니다.</p>
+            
+            <h3>4. 논리 AND연산자</h3>
+            <p>논리 AND연산자 <span>&#38;&#38;</span>는 첫번째 falsy값 또는 마지막 truthy값을 반환합니다.</p>
+            <pre>1 &#38;&#38; 2 &#38;&#38; 0 &#38;&#38; '' ===> 0</pre>
+            <pre>1 &#38;&#38; 4 &#38;&#38; 6 &#38;&#38; 'hi' ===> 'hi'</pre>
+            
+            <h3>5. 논리 OR연산자</h3>
+            <p>논리 OR연산자 <span>&verbar;&verbar;</span>는 첫번째 truthy값 또는 마지막 falsy값을 반환합니다.</p>
+            <pre>1 &verbar;&verbar; 2 &verbar;&verbar; 0 &verbar;&verbar; '' ===> 1</pre>
+            <pre>0 &verbar;&verbar; '' &verbar;&verbar; NaN &verbar;&verbar; undefined ===> 'undefined'</pre>
+            <div class="clearfix logicalOperator">
+            <figure>
+    <pre>
+        function add(a, b){
+          if(typeof b === ‘undefined’){
+             b = a;
+          }  
+        return a + b;}
+        add(10);
+    </pre>
+                <figcaption>
+                    논리 연산자를 잘 사용하면 이런 코드를
+                </figcaption>
+            </figure>
+            
+            <figure>
+    <pre>
+        function add(a, b){
+          b = b || a;
+        return a + b;}
+        add(10);
+        
+        
+    </pre>
+                <figcaption>
+                    이렇게 간단히 바꿀수도 있습니다.
+                </figcaption>
+            </figure>
+            </div>
+        </section>
+    </article>
+   
+</body>
+</html>
+
+
+
+
+
+
+
