@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Evan Han">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>study_week10</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="title">스 . 터 . 디 . W . E . E . K . 10</h1>
+    <article>
+        
+        
+        <section>
+            <h2>내장 객체(Built-in Objects)</h2>
+            <h3>1. MATH</h3>
+            <ul>
+                <li>
+                    <p>수학관련 기능을 담당하며 따로 인스턴스를 만들지 않습니다.</p>
+                </li>
+                <li>
+                    <p>자주 사용하는 상수로 Math.PI가 있습니다.</p>
+                </li>
+                <li>
+                    <p>
+                        자주 사용하는 메소드 : Math.sin(), Math.cos(), Math.tan(), Math.ceil(), Math.round(), Math.floor(), Math.max(), Math.min(), Math.pow(), Math.random()
+                    </p>
+                </li>
+            </ul>
+            
+
+            <h3>2. DATE</h3>
+            <ul>
+                <li>
+                   <p>날짜와 시간을 다루는 객체입니다.</p>
+                </li>
+                <li>
+                    <p>기본 단위는 ms(1/1000초) 입니다.</p>
+                </li>
+                <li>
+                    <p>사용자 시스템의 시간을 기준으로 합니다.</p>
+                </li>
+                <li>
+                    <p>RFC2822 또는 ISO8601의 시간포맷을 문자열을 다룹니다.</p>
+                    <pre>--> var day = new Date(‘1995-12-17T03 : 24:00’);</pre>
+                </li>
+                <li>
+                    <p>아무런 인수 없이 인스턴스를 만들면 현재시각을 표현합니다.</p>
+                    <pre>--> var nowDate = new Date();</pre>
+                </li>
+                <li>
+                    <p>자주 사용하는 메소드 : FullYear(), Month(), Date(), Hours(), Minutes(), Seconds(), Milliseconds(), day()</p>
+                </li>
+            </ul>
+            
+  
+
+
+            <h3>3.<a href="http://json.org"> JSON</a></h3>
+            <p>JSON 문자열을 만들거나 해석합니다.</p>
+            <ul>
+                <li>
+                    <p>텍스로 표현된 정보의 덩어리입니다.</p>
+                </li>
+                <li>
+                    <p>JSON(JavaScript Object Notation)은 자바스크립트에서 객체를 표현하는 형식으로 데이터를 표현한것입니다. 다른 방식에 비해 가볍고 JS 와 호환성이 높아 널리 사용됩니다.</p>
+                </li>
+                <li>
+                    <p>언어마다 다른 표현방식 때문에 정보를 전달하는데 애를 먹습니다. 문자열은 언어마다 표현방식이 같은데 이를 이용해서 만든 데이터 폼이 xml이 있었으나 좀 복잡했습니다. 그래서 탄생한 것이 JSON 입니다.</p>
+                </li>
+                <li>
+                    <p>Math와 마찬가지로 인스턴스를 만들지 않습니다.</p>
+                </li>
+                <li>
+                    <p>JSON.parse(): JSON문자열을 자바스크립트 객체로 변환합니다.</p>
+                </li>
+                <li>
+                    <p>JSON.stringify() : 자바스크립트 객체를 JSON문자열로 변환합니다.</p>
+                </li>
+            </ul>
+        </section>
+        
+        
+        <section>
+            <h2>전역 함수</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI">encodeURI()</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURI">decodeURI()</a>
+                    <p>데이터가 포함된 URL를 전달할 때 사용합니다.(주소 그 자체로 사용할 목적)</p>
+                </li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent">encodeURIComponent()</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent">decodeURIComponent()</a>
+                    <p>데이터만 전달할 때 사용합니다.</p>
+                    <p>
+                        <span>encode</span>함수는 URL 데이터를 다른 어떤 언어를 사용하는 컴퓨터에서도 받아들이게 할 수 있도록, 혹은 브라우져가 해석할 때 틀림이 없도록 영문자와 특수문자만으로 바꿔주는 함수입니다.(JSON.stringify 와 비슷한 역할을 한다고 보시면 됩니다)
+                    </p>
+                    <p><span>decode</span>함수는 encode된 데이터를 원래의 형태로 되돌려주는 역할을 합니다.(JSON.parse 와 비슷한 역할을 한다고 보시면 됩니다)</p>
+                    <pre>
+                        encodeURI(“http://Jaehyun.han/?s=TIS는 학원인가 회사인가?”)
+                        encodeURIComponent(“http://Jaehyun.han/?s=TIS는 학원인가 회사인가?”)
+                    </pre>
+                </li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isFinite">isFinite()</a> 
+                    <p>: 유한한 수인지 확인합니다.</p>
+                </li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN">isNaN()</a> 
+                    <p>: NaN인지 아닌지 확인합니다.</p>
+                </li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat">parseFloat</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt">parseInt</a> 
+                    <p>: 문자열을 숫자로 변환할 때 사용합니다.</p>
+                </li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a> 
+                    <p>: 문자열로 주어진 코드를 평가한 후 값을 반환합니다. 예전 브라우져에서 JSON이 표준이 아닐 때 사용했었습니다. 이젠 사용하지 않는게 맞습니다. JSON.parse 가 훨씬 빠르고 안전합니다.</p>
+                    <pre>
+                        var str = ‘{“학생1” : {“이름” : “한재현”} }’;
+                        var obj = eval( ‘(’ + str + ‘)’ );
+                    </pre>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>if 조건문</h2>
+            <p>주어진 조건식이 truthy일 때 해당하는 코드블럭을 실행합니다.</p>
+            <pre>
+                if(조건식1){
+                   
+                    <span>//이 중괄호 안의 코드는 조건식1의 결과가 참일 때 실행합니다.</span>
+                    
+                }else if(조건식2){
+                
+                    <span>// 이 중괄호 안의 코드는 조건식2의 결과가 참일 때 실행합니다.</span>
+                
+                }else if(조건식3){
+                
+                    <span>// 이 중괄호 안의 코드는 조건식3의 결과가 참일 때 실행합니다.</span>
+                
+                }else{
+                
+                    <span>// 이 중괄호 안의 코드는 위의 조건식들이 모두 거짓일 때 실행됩니다.</span>
+                
+                }
+            </pre>
+        </section>
+        <section>
+            <h2>switch 조건문</h2>
+            <p>한가지 표현식을 여러 값과 같은지 비교한 후 같을 때 코드를 실행합니다.</p>
+            <pre>
+                switch (변수 혹은 조건식){
+                
+                case 값1 :
+                
+                <span>//변수 혹은 조건식의 값이 1일 때 실행할 코드</span>
+                
+                break;
+                
+                case 값2 :
+                
+                <span>//변수 혹은 조건식의 값이 2일 때 실행할 코드</span>
+                
+                break;
+                
+                case 값3 :
+                
+                <span>//변수 혹은 조건식의 값이 3일 때 실행할 코드</span>
+                
+                break;
+                
+                default :
+                
+                <span>//위의 그 어느 case에도 맞지 않을 때 실행할 코드</span>
+                
+                break;
+                
+                }
+            </pre>
+            <p>주의!! 각각의 case는 반드시 break문으로 종료시켜야 합니다.</p>
+        </section>
+    </article>
+   
+</body>
+</html>
+
+
+
+
+
+
+
